@@ -1,0 +1,9 @@
+.btn-custom {
+    background-color: #6D38E0;
+    color: #ffffff; 
+    font-weight: bold; 
+}
+
+.btn-custom:hover {
+    background-color: #5b2db6; 
+}

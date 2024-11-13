@@ -1,0 +1,71 @@
+<div class="container bg-light p-4 rounded-2 col-12 col-lg-9">
+    <!-- Mensaje de éxito al agregar una película -->
+    <div *ngIf="isMovieAdded" class="alert alert-success" role="alert">
+        La película se ha agregado.
+    </div>
+
+    <div>
+        <!-- Título de la sección de agregar película -->
+        <h2 class="text-center mb-2">Agregar Película</h2>
+
+        <!-- Formulario para agregar una nueva película -->
+        <form (ngSubmit)="onSubmit()">
+            <!-- Campo de nombre de la película -->
+            <div class="form-group">
+                <label>Nombre</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    [(ngModel)]="movie.title"
+                    name="name"
+                    required 
+                />
+            </div>
+
+            <!-- Campo de sinopsis de la película -->
+            <div class="form-group">
+                <label class="mt-3">Sinopsis</label>
+                <textarea
+                    class="form-control"
+                    [(ngModel)]="movie.synopsis"
+                    name="synopsis"
+                    required 
+                ></textarea>
+            </div>
+
+            <!-- Campo para ingresar la URL de la imagen de portada (cover) -->
+            <div class="form-group">
+                <label class="mt-3">URL del cover</label>
+                <input
+                    type="text"
+                    class="form-control"
+                    [(ngModel)]="movie.cover"
+                    name="cover"
+                    required
+                />
+            </div>
+
+            <!-- Campo para el año de la película -->
+            <div class="form-group">
+                <label class="mt-3">Año</label>
+                <input
+                    type="number"
+                    class="form-control"
+                    [(ngModel)]="movie.year"
+                    name="year"
+                    required
+                />
+            </div>
+
+            <!-- Botón para enviar el formulario (guardar la película) -->
+            <button type="submit" class="btn mt-3 me-2" style="background-color: #6D38E0; color: white; font-weight: bold; border: none;">
+                Guardar
+            </button>
+
+            <!-- Botón para cancelar el formulario -->
+            <button type="button" class="btn btn-secondary mt-3" (click)="cancel()">
+                Cancelar
+            </button>
+        </form>
+    </div>
+</div>

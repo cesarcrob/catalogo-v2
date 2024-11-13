@@ -1,0 +1,73 @@
+<div class="container bg-light p-4 rounded-2 col-12 col-lg-9">
+    <!-- Título de la sección de edición -->
+    <h2 class="text-center mb-2">Editar Movie</h2>
+
+    <!-- Mensaje de éxito cuando los cambios se guardan correctamente -->
+    <div
+        *ngIf="showSuccessMessage"
+        class="alert alert-success alert-dismissible fade show"
+        role="alert"
+    >
+        ¡Cambios guardados con éxito!
+    </div>
+
+    <!-- Formulario de edición de película -->
+    <form [formGroup]="movieForm" (ngSubmit)="onSubmit()">
+        <!-- Campo de nombre de la película -->
+        <div class="mb-3">
+            <label for="title" class="form-label fw-semibold">Nombre:</label>
+            <input
+                id="title"
+                formControlName="title"
+                class="form-control"
+                placeholder="Ingresa el nombre de la película"
+            />
+        </div>
+        
+        <!-- Campo de sinopsis de la película -->
+        <div class="mb-3">
+            <label for="synopsis" class="form-label fw-semibold">Sinopsis:</label>
+            <textarea
+                id="synopsis"
+                formControlName="synopsis"
+                class="form-control"
+                rows="3"
+                placeholder="Ingresa la sinopsis de la película"
+                resiza="none"
+            ></textarea>
+        </div>
+
+        <!-- Campo para ingresar el año de la película -->
+        <div class="mb-3">
+            <label for="year" class="form-label fw-semibold">Año:</label>
+            <input
+                id="year"
+                type="number"
+                formControlName="year"
+                class="form-control"
+                placeholder="Ingresa el año de la película"
+            />
+        </div>
+
+        <!-- Campo para la URL de la portada de la película -->
+        <div class="mb-3">
+            <label for="cover" class="form-label fw-semibold">Portada (URL):</label>
+            <input
+                id="cover"
+                formControlName="cover"
+                class="form-control"
+                placeholder="Ingresa la URL del cover de la película"
+            />
+        </div>
+
+        <!-- Botones para guardar los cambios o cancelar -->
+        <div class="d-flex">
+            <button type="submit" class="btn mt-2 me-2" style="background-color: #6D38E0; color: white; font-weight: bold; border: none;">
+                Guardar cambios
+            </button>
+            <button type="button" class="btn btn-secondary mt-2" (click)="cancel()">
+                Cancelar
+            </button>
+        </div>
+    </form> 
+</div>

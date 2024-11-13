@@ -1,0 +1,61 @@
+<p>index works!</p>
+
+<div class="d-flex flex-column body">
+ 
+ <!-- Header --> 
+ <header class="bg-gray">
+    <nav class="navbar navbar-expand-lg bg-gray">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/"> 
+                <img 
+                    src="assets/LOGO1.png"
+                    alt="My Movie Catalog"
+                    class="logo"
+                >
+            </a> 
+            <button 
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            > 
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white fw-bold" aria-current="page" href="/">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a 
+                            class="nav-link active text-white fw-bold"
+                            aria-current="page"
+                            href="/movies" 
+                            routerLinkActive="active"
+                        >Catálogo</a> 
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+    </nav>
+</header>
+
+<div class="contenedor-principal container-fluid d-flex flex-column flex-grow-1"> 
+    <div class="contenedor-router-outlet d-flex flex-column flex-grow-1 px-5 my-5">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+<footer class="footer text-center py-4 bg-purple text-white"> 
+    <div>
+        <p><span class="fw-semibold">Materia:</span> CONCEPTUALIZACIÓN DE ENTORNOS DE DESARROLLO DE APLICACIONES Y SERVICIOS</p>
+        <p><span class="fw-semibold">Nombre:</span> César Castellanos Robert</p>
+        <p><span class="fw-semibold">Código:</span> 222958852 </p>
+        <p><span class="fw-semibold">Contacto:</span> cesar.crobert&#64;udgvirtual.udg.mx</p>
+    </div>
+</footer>
+</div>
