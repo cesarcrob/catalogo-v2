@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 })
 export class IndexService {
   // URL de la API para obtener la lista de películas desde el backend de Laravel
-  private MOVIE_API = 'https://catalogo-v2-production.up.railway.app/api/movies';
+  private MOVIE_API = 'https://catalogo-v2-production.up.railway.app/';
 
   // Inyecta HttpClient en el constructor para permitir el uso de solicitudes HTTP
   constructor(private http: HttpClient) {}
