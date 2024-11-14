@@ -1,0 +1,15 @@
+{
+    "builds": [
+      {
+        "src": "dist/catalogo-peliculas/**/*",
+        "use": "@vercel/static"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/dist/catalogo-peliculas/$1"
+      }
+    ]
+  }
+  
